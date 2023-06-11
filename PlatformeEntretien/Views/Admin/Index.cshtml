@@ -1,0 +1,37 @@
+﻿@model PlatformeEntretien.Models.Admin
+@{
+    ViewData["Title"] = " Page  Admin";
+}
+
+<div >
+    <h1 class="display-4" style="text-align:center">Conexion</h1>
+    <div class="card">
+        <form method="post" asp-action="Login" id="apply-form">
+        <div class="card-body">
+            <div class="row">
+                    <div class="col-12">
+                        <div class="col-6 mx-auto">
+                            <label style="margin:5px"><b>Admin :</b></label>
+                            <input class="form-control" id="txtAdmin" asp-for="admin_" />
+                            <span asp-validation-for="admin_" class="text-danger" required></span>
+                        </div>
+                        <div class="col-6 mx-auto">
+                            <label style="margin:5px"><b>Mot de passe  :</b></label>
+                            <input class="form-control" id="txtMotdepasse" type="password" asp-for="motdepass" required />
+                        </div>
+                </div>
+                   
+                
+                 
+                <div class="col-md-12" style="text-align:center">
+                    <br /><br />
+
+                        <button class="btn btn-outline-success" type="submit">Se Connecter </button>
+                </div>
+            </div>
+        </div>
+        </form>
+    </div>
+    
+</div>
+

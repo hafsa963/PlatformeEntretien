@@ -1,0 +1,44 @@
+﻿@model PlatformeEntretien.Models.Admin
+@{
+    ViewData["Title"] = " Page  Adminspace";
+}
+
+<div >
+    <h1 class="display-4" style="text-align:center">Conexion</h1>
+    <div class="card">
+        <form method="post" asp-action="OnGetDelete" id="apply-form">
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                          <th>Prenom</th>
+                        <th>Mail</th>
+                        <th>Telephone</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>John Doe</td>
+                        <td>
+                            <a href="#" class="btn btn-primary btn-sm">Display</a>
+                            <a href="#" class="btn btn-danger btn-sm">Delete</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Jane Smith</td>
+                        <td>
+                            <a href="#" class="btn btn-primary btn-sm">Display</a>
+                            <a href="#" class="btn btn-danger btn-sm">Delete</a>
+                        </td>
+                    </tr>
+                  
+                </tbody>
+            </table>
+        </form>
+   
+</div>
+

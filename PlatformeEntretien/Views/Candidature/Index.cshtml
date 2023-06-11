@@ -1,0 +1,70 @@
+﻿@model PlatformeEntretien.Models.Candidat
+@{
+    ViewData["Title"] = " Page Candidature";
+}
+
+<div >
+    <div class="row">
+        <div class="col-md-6" style="position:fixed;right: 60px">
+            <a href="/Admin" class="btn btn-primary">Espace Admin</a>
+
+
+        </div>
+    </div>
+    <br/>
+    <br />
+       
+        <h1 class="display-4" style="text-align:center">Fiche de Candidature</h1>
+    
+    
+    <div class="card">
+        <form method="post" asp-action="Create" id="apply-form">
+        <div class="card-body">
+            <div class="row">
+                <div class="col-md-6">
+                    <label style="margin:5px"><b>Nom :</b></label>
+                    <input class="form-control" id="txtnom" asp-for="Nom"/>
+                        <span asp-validation-for="Nom" class="text-danger" required></span>
+                </div>
+                <div class="col-md-6">
+                    <label style="margin:5px"><b>Prenom :</b></label>
+                        <input class="form-control" id="txtprenom" asp-for="Prénom" required />
+                </div>
+                <div class="col-md-6">
+                    <label style="margin:5px"><b>Mail :</b></label>
+                        <input class="form-control" id="txtmail" asp-for="Mail" required/>
+                </div>
+                <div class="col-md-6">
+                    <label style="margin:5px"><b>Téléphone :</b></label>
+                        <input class="form-control" id="txtTéléphone" asp-for="Téléphone" required />
+                </div>
+                <div class="col-md-6">
+                    <label style="margin:5px"><b>Niveau d'étude :</b></label>
+                        <select class="form-control" asp-for="Niveau_détude" id="selectnv">
+                        <option value="BAC">BAC</option>
+                        <option value="BAC+2">BAC+2</option>
+                        <option value="BAC+3">BAC+3</option>
+                        <option value="BAC+5">BAC+5</option>
+                    </select>
+                </div>
+                <div class="col-md-6">
+                    <label style="margin:5px"><b>Nombre d'années d'expérience:</b></label>
+                        <input class="form-control" id="nbran" type="number" min="0" required asp-for="Nombre_dannées_dexpérience" />
+                </div>
+                <div class="col-md-6">
+                    <label style="margin:5px"><b>Dernier employeur :</b></label>
+                        <input class="form-control" id="txtderemp" asp-for="Dernier_employeur" required />
+                </div>
+                <div class="col-md-12" style="text-align:center">
+                    <br /><br />
+                        <button class="btn btn-outline-success" type="submit">Valider</button>
+                </div>
+                   
+            </div>
+            
+        </div>
+        </form>
+    </div>
+    
+</div>
+
